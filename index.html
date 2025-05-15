@@ -7,10 +7,27 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: black;
+      background-image: url('assets/background.png'); /* Make sure this path matches your file */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       color: red;
       text-align: center;
       padding: 20px;
+      position: relative;
+      z-index: 0;
+    }
+
+    /* Overlay for readability */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6); /* dark overlay */
+      z-index: -1;
     }
 
     .section {
@@ -77,7 +94,11 @@
     <div class="section">
       <h2>Latest Mixes</h2>
       <div class="card">
-        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2046775092&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/deadmau5" title="deadmau5" target="_blank" style="color: #cccccc; text-decoration: none;">deadmau5</a> · <a href="https://soundcloud.com/deadmau5/deadmau5-kaskade-i-remember-tommy-phillips-remix-preview" title="I Remember (Tommy Phillips Remix)" target="_blank" style="color: #cccccc; text-decoration: none;">I Remember (Tommy Phillips Remix)</a></div>
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2046775092&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+          <a href="https://soundcloud.com/deadmau5" title="deadmau5" target="_blank" style="color: #cccccc; text-decoration: none;">deadmau5</a> · 
+          <a href="https://soundcloud.com/deadmau5/deadmau5-kaskade-i-remember-tommy-phillips-remix-preview" title="I Remember (Tommy Phillips Remix)" target="_blank" style="color: #cccccc; text-decoration: none;">I Remember (Tommy Phillips Remix)</a>
+        </div>
         <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/204677509"></iframe>
         <iframe src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/your-mix2"></iframe>
       </div>
@@ -98,9 +119,8 @@
       <h2>About Me</h2>
       <div class="card">
         <p>
-Deadmau5 track used a example for template \n           
-
-I'm DJ Gene, a genre-blending artist known for high-energy sets and deep vibes. 
+          Deadmau5 track used as example for template<br><br>
+          I'm DJ Gene, a genre-blending artist known for high-energy sets and deep vibes. 
           From underground clubs to major festivals, I deliver unforgettable musical experiences 
           that make people move. With a passion for house, hip-hop, and everything in between, 
           I live to bring rhythm to life.
